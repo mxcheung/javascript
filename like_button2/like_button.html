@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thread Liking</title>
+<style>
+    /* Add your CSS styles for the like button here */
+</style>
+</head>
+<body>
+
+<div id="thread">
+    <h2>Thread Title</h2>
+    <p>Thread content goes here.</p>
+    <button id="likeButton">Like</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const likeButton = document.getElementById('likeButton');
+    let isLiked = false; // Assuming the thread is initially not liked by the user
+
+    // Function to update the UI based on the like state
+    function updateUI() {
+        if (isLiked) {
+            likeButton.textContent = 'Unlike';
+            // Add CSS class or change styles to visually indicate the thread is liked
+        } else {
+            likeButton.textContent = 'Like';
+            // Remove CSS class or revert styles to indicate the thread is not liked
+        }
+    }
+
+    // Simulate a PUT request to /thread/like when the like button is clicked
+    likeButton.addEventListener('click', function() {
+        // Simulated PUT request
+        setTimeout(function() {
+            isLiked = !isLiked; // Toggle like state
+            updateUI(); // Update the UI
+        }, 500); // Simulated delay
+    });
+
+    // Initial UI update
+    updateUI();
+});
+</script>
+
+</body>
+</html>
