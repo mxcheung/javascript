@@ -1,4 +1,4 @@
-README.md
+Web-based applications with asynchronous calls for liking posts.
 
 Folder structure
 ```
