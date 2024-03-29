@@ -1,9 +1,12 @@
 README.md
 
-.
+Folder structure
+```
 ├── ...
-├── src                    # Test files (alternatively `spec` or `tests`)
-│   ├── helpers.js         # Load and stress tests
-│   ├── main.js             # End-to-end, integration tests (alternatively `e2e`)
-│   └── unit                # Unit tests
-└── ...
+├── src                    # Sources files 
+│   ├── helpers.js         # Helper script
+│   ├── main.js            # main script
+│   └── like_service.js    # Asynchronous call to backend
+└──
+```
+
